@@ -22,7 +22,9 @@ Route::group(['middleware' => 'cors', 'prefix' => '/v1'], function () {
     Route::get('/logout/{api_token}', 'Api\CustomerController@logout');
     Route::get('/restaurants', 'Api\RestaurantController@index');
     Route::get('/restaurant/{group_id}', 'Api\RestaurantController@index');
-
+    Route::get('/tax', 'Api\TaxController@getTax');
+    Route::get('/restaurant/{id}', 'Api\RestaurantController@show');
+    Route::get('/restaurantsByGroup', 'Api\RestaurantController@byGroup');
     Route::get('/restaurant/{id}', 'Api\RestaurantController@show');
     Route::get('/category/{id}', 'Api\CategoryController@getAllCategoryByRestaurant');
     Route::get('/groupmenus', 'Api\GroupMenuController@index');
