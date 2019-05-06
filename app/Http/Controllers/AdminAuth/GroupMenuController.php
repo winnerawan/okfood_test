@@ -17,9 +17,9 @@ class GroupMenuController extends Controller
      */
     public function index()
     {
-        $groups = GroupMenu::paginate(10);
+        $groups = GroupMenu::all();
 
-        return view('admin.group.index')->withTypes($groups);
+        return view('admin.group.index')->withGroups($groups);
     }
 
     /**
@@ -101,7 +101,7 @@ class GroupMenuController extends Controller
         $type = Type::find($id);
 
         $type->name = $request->input('name');
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('icon')) {
             $image = $request->file('image');
             $filename = time().'.'.$image->getClientOriginalExtension();
             $location = public_path('/images/'.$filename);

@@ -13,6 +13,7 @@
                 </h4>                                        
                 <li data-sidebar="dashboard"><a class="py-3 px-3" href="{{url('/admin/home')}}"><i class="la la-home"></i><span>Dashboard</span></a></li>
                 <li data-sidebar="widgets"><a class="py-3 px-3" href="{{url('admin/promotion')}}"><i class="la la-bullhorn"></i><span>Promotion</span></a></li>
+                <li data-sidebar="charts"><a class="py-3 px-3" href="{{url('admin/group')}}"><i class="la la-glass"></i><span>Group</span></a></li>
                 <li data-sidebar="charts"><a class="py-3 px-3" href="{{url('admin/type')}}"><i class="la la-glass"></i><span>Restaurant Type</span></a></li>
                 <li data-sidebar="elements"><a class="py-3 px-3" href="{{url('admin/restaurant')}}"><i class="la la-map-marker"></i><span>Restaurant</span></a></li>
                 <li data-sidebar="charts"><a class="py-3 px-3" href="{{url('admin/category')}}"><i class="la la-tag"></i><span>Category</span></a></li>
