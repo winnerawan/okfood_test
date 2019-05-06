@@ -10,6 +10,7 @@ use Response;
 use App\Repository\Transformers\RestaurantTransformer;
 use \Illuminate\Http\Response as Res;
 use Validator;
+use URL;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Support\Facades\Input;
 
