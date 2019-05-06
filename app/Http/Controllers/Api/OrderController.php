@@ -7,6 +7,7 @@ use App\OrderDetail;
 use App\Customer;
 use App\Category;
 use App\Menu;
+use App\Restaurant;
 use App\Repository\Transformers\OrderTransformer;
 use Illuminate\Http\Request;
 use App\Http\Requests;
