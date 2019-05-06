@@ -68,11 +68,11 @@
                                                                         </td>
                                                                         <td class="text-center">
                                                                                 <div class="btn-group">
-                                                                                    {{--  {!! Form::open(['route' => ['admin.group.edit', $group->id], 'method'=> 'GET']) !!}
+                                                                                    {!! Form::open(['route' => ['admin.group.edit', $group->id], 'method'=> 'GET']) !!}
                                                                                     <button type="submit" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Edit">
                                                                                         <i class="la la-pencil"></i>
                                                                                     </button>
-                                                                                    {!! Form::close()  !!}  --}}
+                                                                                    {!! Form::close()  !!}
                                                                                     {!! Form::open(['route' => ['admin.group.destroy', $group->id], 'method' => 'DELETE']) !!}
                                                                                     <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Delete">
                                                                                         <i class="la la-times"></i>
