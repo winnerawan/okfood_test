@@ -95,7 +95,6 @@ class GroupMenuController extends Controller
     {
         $this->validate($request, [
             'name'  => 'required|max:255',
-            'image' => 'required',
           ]);
 
         $type = Type::find($id);
