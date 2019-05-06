@@ -97,7 +97,7 @@ class GroupMenuController extends Controller
             'name'  => 'required|max:255',
           ]);
 
-        $type = Type::find($id);
+        $type = GroupMenu::find($id);
 
         $type->name = $request->input('name');
         if ($request->hasFile('icon')) {
