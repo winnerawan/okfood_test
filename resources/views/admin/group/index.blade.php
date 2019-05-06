@@ -6,7 +6,7 @@
                     <div class="row">
                         
                         <div class="col-sm-12">
-                            <h3>Groupt</h3>
+                            <h3>Group</h3>
                         </div>
                     </div>
                     <div class="row">
@@ -40,7 +40,7 @@
                                                             <thead>
                                                                 <tr>
                                                                 <th scope="col">#</th>
-                                                                <th scope="col">Image</th>
+                                                                <th scope="col">Icon</th>
                                                                 <th scope="col">Name</th>
                                                                 <th scope="col">Created At</th>
                                                                 <th scope="col">Action</th>
@@ -103,7 +103,7 @@
                                                                 {{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                                                             </div>
                                                             <div class="form-group">
-                                                            <label>Image</label><br/>
+                                                            <label>Icon</label><br/>
                                                             {{ Form::file('icon') }}
                                                             </div>
                                                             
