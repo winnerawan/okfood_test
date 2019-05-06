@@ -78,9 +78,9 @@ class GroupMenuController extends Controller
      */
     public function edit($id)
     {
-        $type = GroupMenu::find($id);
+        $group = GroupMenu::find($id);
 
-        return view('admin.group.edit')->withType($type);
+        return view('admin.group.edit')->withGroup($group);
     }
 
     /**
