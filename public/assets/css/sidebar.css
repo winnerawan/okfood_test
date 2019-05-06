@@ -1,0 +1,325 @@
+body{
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; 
+  background: #F9FAFE;
+}
+
+.swipe-area {
+    position: absolute;
+    width: 50px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+}
+
+.fill {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.fill.open-sidebar { 
+    left: 20%;
+}
+
+.fill.open-sidebar .main-content{ 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    width: 80%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.fill.open-sidebar #sidebar { 
+    left: 0px; 
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.fill.open-sidebar #sidebar ul{
+    margin-top: 0px;
+}    
+.fill.open-sidebar #sidebar .d-block{
+    float: none;
+    width: 100%;
+    text-align: right;
+}    
+.fill.open-sidebar #sidebar .d-block h3{
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}    
+.fill.open-sidebar #sidebar .d-block #sidebar-toggle{
+    padding-right: 15px;
+}    
+.fill.open-sidebar #sidebar ul li a {
+    float: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0px;
+    text-align: left;
+}
+.fill.open-sidebar #sidebar ul li {
+    float: none;
+    width: auto;
+    position: relative;   
+    text-align: left;    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}    
+.fill.open-sidebar #sidebar ul li i{
+    margin-right:1rem !important;
+}    
+.fill.open-sidebar #sidebar ul li a span{
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.fill.open-sidebar #sidebar ul li.active a span{
+    transition: unset !important;
+}
+    
+.fill.open-sidebar #sidebar ul li.active a::after {
+    content: '\f17c';
+    position: absolute;
+    color: rgba(255,82,84,0.9);
+    right: 0px;
+    top: 3px;
+    font: normal normal normal 20px/1 LineAwesome;
+    padding: 15px 20px;
+    background: transparent;
+    width: auto;
+    height: auto;
+}    
+    
+
+#sidebar .d-block{
+    float: right;
+    width: 60px;
+    text-align: center;
+    height: 42px;
+}    
+#sidebar {
+  background: #fff;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  left: calc(-20% + 60px);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1000;
+  color :rgba(0,0,0,1);  
+  box-shadow: 0 6px 18px rgba(255,82,84,0.18) !important;
+  
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.05); */
+}
+
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 42px;
+  clear: both;	
+  height: 100%;
+  right: 0;
+  position: relative;
+}
+
+#sidebar ul li { 
+    margin: 0; 
+    position: relative;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+    float: right;
+    right: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar ul li a {
+  padding: 15px 20px;
+  font-size: 16px;
+  color :rgba(0,0,0,1);    
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 60px;
+  text-align: center;
+  position: relative;
+}
+#sidebar ul li a i{
+    margin: 0px !important;
+}    
+#sidebar ul li a span{
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}    
+#sidebar ul li a i{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    width: 20px;
+}    
+#sidebar ul li.active a {
+   color: rgba(255,82,84,0.9) !important;
+}    
+#sidebar ul li.active a::after{
+    content:'';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 10px;
+    background: rgba(255,82,84,0.9);
+    top: 10px;    
+}
+#sidebar ul li:hover a { 
+    /* background: #C9223D;  */
+}
+#sidebar .d-block h3{
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.main-content {  
+  padding-left: 75px;
+  padding-right: 15px;
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-content .content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 60px;
+  width: 100%;
+}
+
+.main-content .content h1 { }
+
+.main-content .content p {
+  width: 100%;
+  line-height: 160%;
+}
+#sidebar-toggle {
+  background: transparent;
+  display: inline-block;
+  position: relative;
+  padding-top: 6px;
+  z-index: 1000;
+  text-decoration: none;
+}
+#sidebar-toggle .bar {
+  display: block;
+  width: 24px;
+  margin-bottom: 5px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 0px;
+}
+#sidebar-toggle .bar:last-child { margin-bottom: 0; }    
+@media (max-width: 1024px) {
+    #sidebar ul{
+        position: absolute;  
+    }
+    #sidebar ul h3{
+        display: none !important;
+    } 
+    #sidebar ul li{
+        width: auto !important;
+    }        
+    .fill.open-sidebar #sidebar ul li.active a::after{
+        content: '' !important;
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        right: 10px !important;
+        background: rgba(255,82,84,0.9);
+        top: 10px !important;
+        padding: 0px !important;
+    }
+    .fill.open-sidebar #sidebar ul{
+        margin: 0 !important;
+        position: relative !important;
+        width: auto !important;
+        text-align: right !important;
+        height: 56px !important;
+        float: right !important;
+        right: 0px !important;
+    }
+    .fill.open-sidebar #sidebar ul li a{
+        width: 60px;
+        text-align: center;
+    }
+    .fill.open-sidebar #sidebar{
+        /* left: calc(-20% + 120px) !important; */
+        left: -60px !important;
+        box-shadow: 0 0px 0px rgba(255,82,84,0.18) !important;  
+    }
+    .fill.open-sidebar #sidebar ul li i{
+        margin-right: 0px !important;
+    }
+    .fill.open-sidebar #sidebar {    
+        width: 60px !important;
+    }
+    .fill.open-sidebar #sidebar ul li a span{
+        display: none !important;
+    }
+    .fill.open-sidebar .main-content{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .fill.open-sidebar{
+        left: 0%;
+    }
+    .main-content{
+        padding-left: 60px !important;
+        padding-right: 0px !important;
+        padding-top: 0px !important; 
+    }
+}

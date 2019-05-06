@@ -1,0 +1,85 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "OK-FOOD REST API DOCUMENTATION",
+        "description": "Multi vendor restaurant ordering system ",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "ceo@next-innovation.co.id"
+        },
+        "version": "1.0.0"
+    },
+    "host": "ok-food.swagger.io",
+    "basePath": "/v2",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/category/byRestaurant": {
+            "get": {
+                "tags": [
+                    "category"
+                ],
+                "summary": "Finds Pets by tags",
+                "description": "Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+                "operationId": "byRestaurant",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "description": "restaurant id",
+                        "required": true,
+                        "type": "integer",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Category"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    }
+                },
+                "deprecated": true,
+                "security": [
+                    {
+                        "petstore_auth": [
+                            "write:pets",
+                            "read:pets"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Category": {
+            "required": [
+                "name",
+                "restaurant_id"
+            ],
+            "type": "object",
+            "xml": {
+                "name": "Category"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about OK-FOOD",
+        "url": "http://swagger.io"
+    }
+}
