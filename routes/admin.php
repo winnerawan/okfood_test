@@ -14,6 +14,8 @@ Route::resource('category', 'AdminAuth\CategoriesController');
 Route::resource('type', 'AdminAuth\TypeController');
 Route::resource('restaurant', 'AdminAuth\RestaurantsController');
 Route::resource('menu', 'AdminAuth\MenusController');
+Route::resource('customer', 'AdminAuth\CustomersController');
+Route::resource('merchant', 'AdminAuth\MerchantController');
 Route::resource('promotion', 'AdminAuth\PromotionController');
 Route::resource('page', 'AdminAuth\PageController');
 Route::resource('tax', 'AdminAuth\TaxController');
