@@ -57,7 +57,7 @@
                                                                         
                                                                         <td class="d-none d-md-table-cell">
                                                                             <span class="text-black">
-                                                                                <img src="{{ ('../images/'.$group->image)}}" width="60px;" height="20px;"/>
+                                                                                <img src="{{ ('../images/'.$group->icon)}}" width="60px;" height="20px;"/>
                                                                             </span>
                                                                         </td>
                                                                         <td class="d-none d-md-table-cell">
